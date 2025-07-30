@@ -5,15 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #222; color: #fff; padding: 20px 0; }
-        nav { margin-top: 10px; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .hero { background: #f4f4f4; padding: 60px 20px; text-align: center; }
-        .section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        h2 { color: #222; }
-        ul.skills { list-style: none; padding: 0; }
-        ul.skills li { background: #e0e0e0; display: inline-block; margin: 5px 10px 5px 0; padding: 8px 16px; border-radius: 20px; }
+        :root {
+            --primary: #0a192f;
+            --secondary: #64ffda;
+            --accent: #112240;
+            --text: #ccd6f6;
+            --muted: #8892b0;
+            --white: #fff;
+        }
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--primary);
+            color: var(--text);
+        }
+        header {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 30px 0 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: var(--secondary);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--white);
+        }
+        .hero {
+            background: linear-gradient(120deg, var(--accent) 60%, var(--secondary) 100%);
+            padding: 70px 20px 50px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            color: var(--muted);
+        }
+        .section {
+            background: var(--accent);
+            padding: 45px 30px;
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        }
+        h2 {
+            color: var(--secondary);
+            font-size: 2em;
+            margin-bottom: 18px;
+        }
+        h3 {
+            color: var(--white);
+            margin-top: 30px;
+        }
+        ul.skills {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+        ul.skills li {
+            background: var(--secondary);
+            color: var(--primary);
+            display: inline-block;
+            margin: 6px 12px 6px 0;
+            padding: 10px 20px;
+            border-radius: 22px;
+            font-weight: 500;
+            font-size: 1.08em;
+            box-shadow: 0 2px 8px rgba(100,255,218,0.08);
+        }
+        ul {
+            color: var(--text);
+        }
+        .personal-statement {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 22px 28px;
+            border-radius: 14px;
+            font-size: 1.18em;
+            margin: 35px 0 0 0;
+            box-shadow: 0 2px 12px rgba(100,255,218,0.10);
+        }
+        @media (max-width: 700px) {
+            .section { padding: 25px 8px; }
+            .hero { padding: 40px 8px 30px 8px; }
+        }
     </style>
 </head>
 <body>
@@ -30,13 +119,18 @@
     </header>
 
     <section class="hero" id="hero">
-        <h2>Welcome to My Professional Portfolio</h2>
+        <h2>Graham Stoddard</h2>
+        <p style="font-size:1.4em; color:var(--white); margin-bottom: 18px;">Professional Portfolio</p>
         <p>From championship-winning NASCAR pit stops to data-driven business solutions, I bring a unique blend of high-pressure execution, teamwork, and analytical thinking to the world of data science.</p>
     </section>
 
     <section class="section" id="about">
         <h2>About Me</h2>
         <p>I am Graham Stoddard, a dynamic professional with a competitive mindset and a proven record of high-pressure execution. My journey from NCAA football to championship-winning NASCAR pit crews has instilled in me a relentless drive for excellence, precision, and collaboration. In recent years, I have dedicated myself to mastering the core skills of data science—combining my real-world experience in logistics, analytics, and teamwork with technical expertise in programming, statistics, and machine learning. I am passionate about using data to solve complex problems, uncover insights, and drive impactful decisions.</p>
+        <div class="personal-statement">
+            <strong>Personal Statement:</strong><br>
+            My career has been defined by a commitment to excellence, adaptability, and a drive to succeed in high-stakes environments. As I transition into data science, I bring the same discipline, focus, and hunger for results that led to success in elite athletics and business. I am eager to leverage my unique background and new technical skills to deliver innovative solutions and make a meaningful impact in the world of data science.
+        </div>
     </section>
 
     <section class="section" id="summary">
@@ -101,10 +195,6 @@
         January 2012</p>
     </section>
 
-    <section class="section" id="resume">
-        <h2>Resume</h2>
-        <p>You can view or download my resume here:</p>
-        <a href="/Users/g_stod/Desktop/Stoddard Resume.pdf" target="_blank" style="font-size:1.2em; color:#007acc; text-decoration:underline;">View Resume (PDF)</a>
-    </section>
+    <!-- Resume section removed as requested -->
 </body>
 </html>
