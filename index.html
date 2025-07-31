@@ -113,12 +113,7 @@
                 <a href="#about" onclick="showSection('about')">About Me</a>
                 <a href="#skills" onclick="showSection('skills')">Skills</a>
                 <a href="#resume" onclick="showSection('resume')">Resume</a>
-                <a href="#contact" onclick="showSection('contact')">Contact</a>
-    <section class="section" id="contact" style="display:none;">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:graham_p_stoddard@yahoo.com" style="color: var(--gray); text-decoration: underline;">graham_p_stoddard@yahoo.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/graham-stoddard-4ab80781?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8y2EBetAQR28cjA2xo8a3w%3D%3D" target="_blank" style="color: var(--gray); text-decoration: underline;">linkedin.com/in/graham-stoddard-4ab80781</a></p>
-    </section>
+                <a href="#contact" onclick="scrollToContact()">Contact</a>
             </nav>
         </div>
     </header>
@@ -199,51 +194,26 @@
         University of Nebraska, Lincoln, NE<br>
         January 2012</p>
     </section>
-    <section class="section" id="resume" style="display:none;">
-        <h2>Resume</h2>
-        <div>
-            <h3>Professional Summary</h3>
-            <p>Dynamic professional with a competitive mindset and proven high-pressure execution as a Pit Crew Member at Team Penske, contributing to 3 NASCAR Cup Series championships. Skilled in logistics coordination and teamwork, I thrive in fast-paced environments, consistently delivering excellence and precision under pressure while fostering collaboration and communication among team members.</p>
-        </div>
-        <div>
-            <h3>Professional Experience</h3>
-            <h4>Pit Crew Member, Team Penske (2017 - Present)</h4>
-            <ul>
-                <li>Performed front-line jackman duties for a top NASCAR pit crew; contributed to 3 Cup Series championships and 30+ race wins.</li>
-                <li>Delivered consistent, high-speed execution under national broadcast pressure and unpredictable race conditions.</li>
-                <li>Maintained peak physical conditioning and split-second coordination to safely and precisely execute pit stops.</li>
-                <li>Collaborated with crew members, engineers, and crew chiefs to align pit stop timing with race-day strategy.</li>
-                <li>Committed to excellence and performance, helping teams maintain championship-level standards.</li>
-            </ul>
-            <h4>Account Manager, Davco Roofing (2020 - 2022)</h4>
-            <ul>
-                <li>Analyzed sales data using CRM tools to track account performance metrics over time.</li>
-                <li>Monitored industry trends and competitor activities to inform strategic planning.</li>
-                <li>Identified opportunities for upselling and cross-selling to existing clients.</li>
-                <li>Managed client accounts to ensure satisfaction and retention.</li>
-                <li>Created detailed proposals and participated in sales presentations and negotiations.</li>
-            </ul>
-            <h4>Football Player, University of Nebraska (2008 - 2012)</h4>
-            <ul>
-                <li>Maintained readiness for football season with dedication to strength and conditioning programs.</li>
-                <li>Supported community outreach initiatives and served as a mentor to younger players.</li>
-                <li>Adapted quickly to new strategies and demonstrated leadership on and off the field.</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Education</h3>
-            <p><strong>Bachelor of Science (B.S.) - Finance & Economics</strong><br>
-            University of Nebraska, Lincoln, NE<br>
-            January 2012</p>
-        </div>
+
+    <section class="section" id="contact" style="margin-bottom: 0;">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:graham_p_stoddard@yahoo.com" style="color: var(--gray); text-decoration: underline;">graham_p_stoddard@yahoo.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/graham-stoddard-4ab80781?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8y2EBetAQR28cjA2xo8a3w%3D%3D" target="_blank" style="color: var(--gray); text-decoration: underline;">linkedin.com/in/graham-stoddard-4ab80781</a></p>
     </section>
     <script>
     function showSection(section) {
-        const ids = ['hero', 'about', 'skills', 'resume', 'contact'];
+        const ids = ['hero', 'about', 'skills', 'resume'];
         ids.forEach(id => {
             const el = document.getElementById(id);
             if (el) el.style.display = (id === section) ? 'block' : 'none';
         });
+    }
+    function scrollToContact() {
+        showSection('hero'); // Show a main section so something is visible
+        setTimeout(function() {
+            const contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
     }
     </script>
 
